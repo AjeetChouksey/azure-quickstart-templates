@@ -315,7 +315,8 @@
               "properties": {
                 "nodeName": "[parameters('sqVM_AppName')]",
                 "sqVM_AppAdmin_UserName": "[parameters('sqVM_AppAdmin_UserName')]",
-                "connectionString": "[reference('deploySQLDB').outputs.jdbcConnString.value]", 
+                "sqlServer": "[variables('AzureSqlServerName')]", 
+		      "database":"[parameters('sqDB_DBName')]"
                 "connectionUsername": "[parameters('sqDB_Admin_UserName')]",
                 "connectionPassword": "[parameters('sqDB_Admin_Password')]",
                 "sqVmAdminPwd": "[parameters('sqVM_AppAdmin_Password')]",
