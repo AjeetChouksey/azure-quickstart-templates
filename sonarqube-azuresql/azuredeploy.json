@@ -315,9 +315,12 @@
               "properties": {
                 "nodeName": "[parameters('sqVM_AppName')]",
                 "sqVM_AppAdmin_UserName": "[parameters('sqVM_AppAdmin_UserName')]",
-                "connectionString": "[reference('deploySQLDB').outputs.jdbcConnString.value]",                
+                "connectionString": "[reference('deploySQLDB').outputs.jdbcConnString.value]", 
+                "connectionUsername": "[parameters('sqDB_Admin_UserName')]",
+                "connectionPassword": "[parameters('sqDB_Admin_Password')]",
                 "sqVmAdminPwd": "[parameters('sqVM_AppAdmin_Password')]",
-                "sqLtsVersion": "[parameters('sqVM_LTS_Version')]"
+                "sqLtsVersion": "[parameters('sqVM_LTS_Version')]",                
+	              "sonarQubeDownloadRoot": "[parameters('sonarQubeDownloadRoot')]"
               }
             },
             "protectedSettings": {}
