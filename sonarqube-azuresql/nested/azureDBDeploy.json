@@ -92,7 +92,7 @@
   "outputs": {
     "jdbcConnString": {
       "type": "string",
-      "value": "[concat('jdbc:sqlserver://', reference(concat('Microsoft.Sql/servers/', parameters('sonarSqlName'))).fullyQualifiedDomainName, ':1433;database=', parameters('sonarDbName'), ';ssl=require')]"
+      "value": "[concat('jdbc:sqlserver://', reference(concat('Microsoft.Sql/servers/', parameters('sonarSqlName'))).fullyQualifiedDomainName, ':1433;database=', parameters('sonarDbName'), ';user='parameters('adminLogin'), '@', parameters('sonarSqlName'),';password=',parameters('adminPassword'),'encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30')]"
     },
     "jdbcUserName":{
       "type": "string",
