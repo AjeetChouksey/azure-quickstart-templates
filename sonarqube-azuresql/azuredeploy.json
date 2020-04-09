@@ -106,11 +106,9 @@
     },
     "sqVM_LTS_Version": {
       "type": "string",
-      "defaultValue": "sonarqube-7.9.2",
+      "defaultValue": "sonarqube-7.9.3",
       "allowedValues": [
-        "sonarqube-8.2",
-        "sonarqube-8.1",
-        "sonarqube-8.0"
+        "sonarqube-8.2.0.32929"
       ],
       "metadata": {
         "description": "Version of SonarQube to install"
