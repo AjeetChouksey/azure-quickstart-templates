@@ -108,6 +108,7 @@
       "type": "string",
       "defaultValue": "sonarqube-7.9.3",
       "allowedValues": [
+	"sonarqube-7.9.3",
         "sonarqube-8.2.0.32929"
       ],
       "metadata": {
